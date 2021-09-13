@@ -28,4 +28,4 @@ async def on_message(ctx, message):
         await ctx.send(embed=embed)
 
 
-client.run("ODA0NjEwMDc5NDIzOTg3NzEy.YBO1hw.uR6W5PkCrorLM8RtoRuHfAghyX4")
+client.run("TOKEN")
