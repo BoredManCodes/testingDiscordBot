@@ -1,12 +1,12 @@
-import os
 
+# allows you to save your bot token and other sensitive info in a .env file which you then ignore from github
+from decouple import config
 import discord
-from dotenv import load_dotenv
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
 
-client = discord.Client()
+TOKEN = config('DISCORD_TOKEN')
+client = discord.Client() # you should really be using the bot version instead of the client
+
 
 @client.event
 async def on_ready():
@@ -19,6 +19,7 @@ async def on_ready():
 #     if message.content == 'What is the server IP?':
 #         response = 'Server is currently in updating mode, so there is no IP for now.'
 #         await message.channel.send(response)
+
 
 @client.event
 async def on_message(ctx, message):
